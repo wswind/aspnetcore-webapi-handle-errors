@@ -15,7 +15,7 @@
             StatusCode = statusCode;
         }
 
-        public string ExceptionCode { get; set; } = "Unknown";
+        public string ExceptionCode { get; set; }
 
         public int StatusCode { get; set; } = StatusCodes.Status500InternalServerError;
     }

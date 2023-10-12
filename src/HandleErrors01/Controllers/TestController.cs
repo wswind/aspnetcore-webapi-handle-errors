@@ -10,9 +10,7 @@ public class TestController : ControllerBase
     [HttpGet]
     public IActionResult Get([FromServices] IHostEnvironment hostEnvironment)
     {
-        if (hostEnvironment.IsDevelopment())
-            throw new HttpResponseException(400, "foobar");
-        else
-            throw new Exception("release");
+        throw new Exception("this is a test exception");
+        //throw new BusinessException("BizError", "something happened");
     }
 }
